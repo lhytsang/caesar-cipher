@@ -10,5 +10,7 @@ fileText = []
 myFile = open("ciphertext1-2.txt", "r")
 for line in myFile:     
     line = line.strip()
-    print(line)
+    #print(line)
+    fileText.append(line)
+print(*fileText)
     
