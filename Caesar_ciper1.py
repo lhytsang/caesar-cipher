@@ -12,5 +12,7 @@ for line in myFile:
     line = line.strip()
     #print(line)
     fileText.append(line)
-print(*fileText)
+#print(fileText)
+fileWords = [word for phrase in fileText for word in phrase.split()]
+print(fileWords)
 myFile.close()
