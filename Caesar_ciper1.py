@@ -17,4 +17,10 @@ fileWords = [list(word) for phrase in fileText for word in phrase.split()]
 print(fileWords)
 #fileChars = [letter for term in fileWords for letter in term]
 #print(fileChars)
+
+for char in fileWords:
+    count = 0
+    while count < len(char):
+        print(char[count])
+        count += 1
 myFile.close()
