@@ -9,16 +9,14 @@ fileText = []
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letters = list(alphabet)
 rotation = 2
+
 myFile = open("ciphertext1-2.txt", "r")
+
 for line in myFile:     
     line = line.strip()
-    #print(line)
     fileText.append(line)
-#print(fileText)
+
 fileWords = [list(word) for phrase in fileText for word in phrase.split()]
-#print(fileWords)
-#fileChars = [letter for term in fileWords for letter in term]
-#print(fileChars)
 
 for chars in fileWords:
     count = 0
@@ -28,11 +26,11 @@ for chars in fileWords:
             position = alphabet.find(char)
             chars[count] = letters[(position-rotation)%26]
         count += 1
-#print(fileWords)
+
 new_words = []
 for words in fileWords:
     new_words.append(''.join(words))
-#print(new_words)
+
 encryptMessage = ' '.join(new_words)
 print(encryptMessage)
 myFile.close()
