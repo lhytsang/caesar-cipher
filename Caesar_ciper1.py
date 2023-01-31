@@ -19,9 +19,11 @@ fileWords = [list(word) for phrase in fileText for word in phrase.split()]
 #fileChars = [letter for term in fileWords for letter in term]
 #print(fileChars)
 
-for char in fileWords:
+for chars in fileWords:
     count = 0
-    while count < len(char):
-        position = alphabet.find(char[count])
+    while count < len(chars):
+        char = chars[count]
+        if char.isalpha():
+            position = alphabet.find(char)
         count += 1
 myFile.close()
