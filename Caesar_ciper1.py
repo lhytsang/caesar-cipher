@@ -13,4 +13,4 @@ for line in myFile:
     #print(line)
     fileText.append(line)
 print(*fileText)
-    
+myFile.close()
