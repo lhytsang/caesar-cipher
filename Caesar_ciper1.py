@@ -26,5 +26,6 @@ for chars in fileWords:
         char = chars[count]
         if char.isalpha():
             position = alphabet.find(char)
+            char = letters[(position+rotation)]
         count += 1
 myFile.close()
