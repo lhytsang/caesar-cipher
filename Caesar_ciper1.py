@@ -10,14 +10,17 @@ alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letters = list(alphabet)
 rotation = 2
 
+# Opening the file with the text to be encrypted/decrypted
 myFile = open("ciphertext1-2.txt", "r")
 
+# Removing spaces at the start and end of the words and adding it to a new list
 for line in myFile:     
-    line = line.strip()
-    fileText.append(line)
+    fileText.append(line.strip())
 
+# Creating a list of letters within words within the list of words
 fileWords = [list(word) for phrase in fileText for word in phrase.split()]
 
+# Changing the original letter into an encrypted/decrypted letter
 for chars in fileWords:
     count = 0
     while count < len(chars):
@@ -27,10 +30,12 @@ for chars in fileWords:
             chars[count] = letters[(position-rotation)%26]
         count += 1
 
+# Joining all the letters and words into one sentence  
 new_words = []
 for words in fileWords:
     new_words.append(''.join(words))
+newMessage = ' '.join(new_words)
 
-encryptMessage = ' '.join(new_words)
-print(encryptMessage)
+# Showing the final new encrypted/decrypted message
+print(newMessage)
 myFile.close()
