@@ -8,7 +8,7 @@ Created on Tue Jan 31 02:54:19 2023
 fileText = []
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letters = list(alphabet)
-rotation = 11
+rotation = 2
 myFile = open("ciphertext1-2.txt", "r")
 for line in myFile:     
     line = line.strip()
@@ -26,11 +26,13 @@ for chars in fileWords:
         char = chars[count]
         if char.isalpha():
             position = alphabet.find(char)
-            chars[count] = letters[(position+rotation)%26]
+            chars[count] = letters[(position-rotation)%26]
         count += 1
 #print(fileWords)
 new_words = []
 for words in fileWords:
     new_words.append(''.join(words))
-print(new_words)
+#print(new_words)
+encryptMessage = ' '.join(new_words)
+print(encryptMessage)
 myFile.close()
