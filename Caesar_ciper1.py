@@ -28,5 +28,9 @@ for chars in fileWords:
             position = alphabet.find(char)
             chars[count] = letters[(position+rotation)%26]
         count += 1
-print(fileWords)
+#print(fileWords)
+new_words = []
+for words in fileWords:
+    new_words.append(''.join(words))
+print(new_words)
 myFile.close()
