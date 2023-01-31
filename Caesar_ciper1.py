@@ -8,3 +8,6 @@ Created on Tue Jan 31 02:54:19 2023
 fileText = []
 
 myFile = open("ciphertext1-2.txt", "r")
+for line in myFile:
+    print(line)
+    
