@@ -15,6 +15,6 @@ for line in myFile:
 #print(fileText)
 fileWords = [word for phrase in fileText for word in phrase.split()]
 #print(fileWords)
-fileChars = [list(letter) for term in fileWords for letter in term]
+fileChars = [letter for term in fileWords for letter in term]
 print(fileChars)
 myFile.close()
