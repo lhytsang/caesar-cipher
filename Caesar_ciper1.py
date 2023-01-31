@@ -8,6 +8,7 @@ Created on Tue Jan 31 02:54:19 2023
 fileText = []
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letters = list(alphabet)
+rotation = 2
 myFile = open("ciphertext1-2.txt", "r")
 for line in myFile:     
     line = line.strip()
